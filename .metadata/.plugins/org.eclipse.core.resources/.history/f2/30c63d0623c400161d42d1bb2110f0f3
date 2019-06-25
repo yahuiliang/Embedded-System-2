@@ -1,0 +1,11 @@
+#include "uart_driver.h";
+#include "delay_api.h";
+#include <stdio.h>;
+
+#define A 100
+
+int main() {
+	int a[] = {1, 2, 3, 4, 5, 156};
+	printf(sizeof(a));
+	return 0;
+}

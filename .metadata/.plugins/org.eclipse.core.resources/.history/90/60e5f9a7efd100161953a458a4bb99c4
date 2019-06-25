@@ -1,0 +1,15 @@
+/*
+ * keypad_api.c
+ *
+ *  Created on: Jan 3, 2017
+ *      Author: Yahui Liang
+ */
+
+#include <inttypes.h>
+#include "keypad_api.h"
+
+void init() {
+	volatile uint32_t* ahb1enr = (uint32_t*) RCC_AHB1ENR;
+	*ahb1enr |= 1 << 2;
+
+}

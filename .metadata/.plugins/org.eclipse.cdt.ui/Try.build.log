@@ -1,0 +1,28 @@
+01:59:58 **** Incremental Build of configuration Debug for project Try ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Try\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Try/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_PB8_to_PB10_and_PB12_to_PB13':
+../src/main.c:115:11: warning: unused variable 'a' [-Wunused-variable]
+  uint32_t a = (~0b111111 << 16);
+           ^
+'Finished building: ../src/main.c'
+' '
+'Building target: Try.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Try\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Try.elf" @"objects.list"  
+'Finished building target: Try.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Try.elf" "Try.bin"
+arm-none-eabi-size "Try.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19284	    168	   1072	  20524	   502c	Try.elf
+arm-none-eabi-objdump -S "Try.elf" > "Try.lst"
+' '
+
+01:59:59 Build Finished (took 869ms)
+

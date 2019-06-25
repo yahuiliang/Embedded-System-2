@@ -1,0 +1,10 @@
+#define RCC_AHB1ENR 0x40023830
+#define GPIOB_BASE 0x40020400
+#define GPIOC_BASE 0x40020800
+
+void lcd_init();
+void lcd_clear();
+void lcd_home();
+void lcd_set_position();
+void lcd_print_string();
+void lcd_print_num();

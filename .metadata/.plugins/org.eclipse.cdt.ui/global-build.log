@@ -1,0 +1,972 @@
+14:08:29 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c:12:1: error: conversion to non-scalar type requested
+ static volatile GPIOx* gpioc = (GPIOx) GPIOC_BASE;
+ ^
+make: *** [src/keypad_api.o] Error 1
+14:10:13 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+startup/startup_stm32.o: In function `LoopFillZerobss':
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug/../startup/startup_stm32.s:97: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Lab4.elf] Error 1
+17:25:08 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19252	    168	   1072	  20492	   500c	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:26:11 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19252	    168	   1072	  20492	   500c	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:26:37 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19252	    168	   1072	  20492	   500c	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:41:09 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:41:21 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:42:48 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+make: Nothing to be done for `all'.
+17:44:09 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:44:17 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:46:42 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:46:48 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:47:31 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+make: Nothing to be done for `all'.
+17:50:27 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:50:35 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:52:02 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:52:10 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:55:43 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19572	    172	   1068	  20812	   514c	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:55:49 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19572	    172	   1068	  20812	   514c	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:58:02 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:58:10 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+17:58:32 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+make: Nothing to be done for `all'.
+17:58:49 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+make: Nothing to be done for `all'.
+18:01:22 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19580	    172	   1068	  20820	   5154	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+18:08:48 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19572	    172	   1068	  20812	   514c	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+18:08:59 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+'Building file: ../startup/startup_stm32.s'
+'Invoking: MCU GCC Assembler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+'Finished building: ../startup/startup_stm32.s'
+' '
+'Building file: ../startup/sysmem.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+'Finished building: ../startup/sysmem.c'
+' '
+'Building file: ../src/delay_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay_api.d" -MT"src/delay_api.o" -o "src/delay_api.o" "../src/delay_api.c"
+'Finished building: ../src/delay_api.c'
+' '
+'Building file: ../src/keypad_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/keypad_api.d" -MT"src/keypad_api.o" -o "src/keypad_api.o" "../src/keypad_api.c"
+../src/keypad_api.c: In function 'main':
+../src/keypad_api.c:16:6: warning: unused variable 'key' [-Wunused-variable]
+  int key = key_getkey_noblock();
+      ^
+'Finished building: ../src/keypad_api.c'
+' '
+'Building file: ../src/lcd_api.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd_api.d" -MT"src/lcd_api.o" -o "src/lcd_api.o" "../src/lcd_api.c"
+'Finished building: ../src/lcd_api.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/uart_driver.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab4\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab4/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/uart_driver.d" -MT"src/uart_driver.o" -o "src/uart_driver.o" "../src/uart_driver.c"
+'Finished building: ../src/uart_driver.c'
+' '
+'Building target: Lab4.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab4\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab4.elf" @"objects.list"  
+'Finished building target: Lab4.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab4.elf" "Lab4.bin"
+arm-none-eabi-size "Lab4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19572	    172	   1068	  20812	   514c	Lab4.elf
+arm-none-eabi-objdump -S "Lab4.elf" > "Lab4.lst"
+' '
+18:09:12 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+make: Nothing to be done for `all'.
+18:09:21 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+make: Nothing to be done for `all'.
+18:09:29 **** Incremental Build of configuration Debug for project Lab4 ****
+make all 
+make: Nothing to be done for `all'.

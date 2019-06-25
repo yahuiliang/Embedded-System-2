@@ -1,0 +1,14 @@
+/*
+ * keypad_api.h
+ *
+ *  Created on: Dec 23, 2016
+ *      Author: Yahui Liang
+ */
+
+#ifndef KEYPAD_API_H_
+#define KEYPAD_API_H_
+
+#define RCC_AHB1ENR 0x40023830
+#define GPIOC_BASE 0x40020800
+
+#endif /* KEYPAD_API_H_ */

@@ -1,0 +1,14 @@
+#include "uart_driver.h"
+#include "delay_api.h"
+#include "lcd_api.h"
+#include <stdio.h>
+
+int main() {
+	lcd_init();
+	lcd_data('C');
+	lcd_data('E');
+	lcd_set_position();
+	lcd_data('2');
+	lcd_data('8');
+	return 0;
+}

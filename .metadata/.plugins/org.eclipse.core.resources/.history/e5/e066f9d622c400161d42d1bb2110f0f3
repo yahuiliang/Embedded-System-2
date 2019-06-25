@@ -1,0 +1,13 @@
+#include "uart_driver.h";
+#include "delay_api.h";
+#include <stdio.h>;
+
+#define A 100
+
+int main() {
+	init_usart2(19200, F_CPU);
+	printf("Hello World");
+	delay_ms(2000);
+	printf("Hello World");
+	return 0;
+}

@@ -1,0 +1,9 @@
+#include "uart_driver.h"
+#include "delay_api.h"
+#include "lcd_api.h"
+#include <stdio.h>
+
+int main() {
+	init_usart2(19200, 16000000UL);
+	return 0;
+}

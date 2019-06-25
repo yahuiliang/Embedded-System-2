@@ -1,0 +1,4 @@
+src/syscalls.o: ../src/syscalls.c \
+ D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/uart_driver.h
+
+D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/uart_driver.h:

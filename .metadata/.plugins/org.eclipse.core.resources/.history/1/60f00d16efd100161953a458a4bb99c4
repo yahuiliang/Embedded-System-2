@@ -1,0 +1,10 @@
+/*
+ * keypad_api.c
+ *
+ *  Created on: Jan 3, 2017
+ *      Author: Yahui Liang
+ */
+
+void enable_ports() {
+
+}

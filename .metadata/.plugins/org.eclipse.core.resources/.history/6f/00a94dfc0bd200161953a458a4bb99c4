@@ -1,0 +1,10 @@
+src/lcd_api.o: ../src/lcd_api.c \
+ D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/lcd_api.h \
+ D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/delay_api.h \
+ D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/reg_struct.h
+
+D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/lcd_api.h:
+
+D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/delay_api.h:
+
+D:/STM32\ Workspace/Embeded\ System\ 2/Lab4/inc/reg_struct.h:

@@ -1,0 +1,76 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 7, 2016
+ *      Author: barnekow
+ */
+#include <stdio.h>
+#include <inttypes.h>
+
+#define F_CPU 16000000UL
+#define RCC_AHB1ENR (volatile uint32_t*) 0x40023830
+#define GPIOA_MODER (volatile uint32_t*) 0x40020000
+#define GPIOB_MODER (volatile uint32_t*) 0x40020400
+#define GPIOA_ODR (volatile uint32_t*) 0x40020014
+#define GPIOB_ODR (volatile uint32_t*) 0x40020414
+
+void init_PA7_to_PA11();
+void init_PB8_to_PB10_and_PB12_to_PB13();
+void delay_ms(uint32_t);
+void light_LED(uint16_t);
+void light_LED_init();
+
+// main
+int main(void){
+	uint16_t number = 0b0000000001;
+	for (int i = 0; i < ) {
+
+	}
+}
+
+void light_LED_init() {
+	init_PA7_to_PA11();
+	init_PB8_to_PB10_and_PB12_to_PB13();
+}
+
+void delay_ms(uint32_t theDelay) {
+	volatile uint32_t *systick;
+	systick = (uint32_t *) 0xE000E010;
+	*systick = 0;
+	systick[2] = 0;
+	systick[0] = 0;
+	systick[1] = theDelay * (F_CPU / 8000);
+	systick[0] = 1; // enable the clock.
+	while (!(systick[0] & (1 << 16))) {
+		// nothing to do.
+	}
+	systick[0] = 0;
+	return;
+}
+
+void init_PA7_to_PA11() {
+	/* enable the clock for GPIOA */
+	*RCC_AHB1ENR |= 1;
+	/* set mode */
+	*GPIOA_MODER &= (~0b1111111111 << 14); // make sure bits are set to 0.
+	*GPIOA_MODER |= (0b0101010101 << 14);
+}
+
+void init_PB8_to_PB10_and_PB12_to_PB13() {
+	/* enable the clock for GPIOB */
+	*RCC_AHB1ENR |= (1 << 1);
+	/* set mode */
+	*GPIOB_MODER &= (~0b111111 << 16);
+	*GPIOB_MODER &= (~0b1111 << 24);
+	*GPIOB_MODER |= (0b010101 << 16);
+	*GPIOB_MODER |= (0b0101 << 24);
+}
+
+void light_LED(uint16_t number) {
+	uint16_t least_5_bits = (number & ~0xFFE0) << 7;
+	uint16_t middle_3_bits = (number & ~0xFF1F) << 3;
+	uint16_t last_2_bits = (number & ~0xFCFF) << 4;
+	*GPIOA_ODR |= least_5_bits;
+	*GPIOB_ODR |= middle_3_bits;
+	*GPIOB_ODR |= last_2_bits;
+}

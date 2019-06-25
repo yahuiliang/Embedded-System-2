@@ -1,0 +1,24 @@
+01:49:07 **** Incremental Build of configuration Debug for project Lab2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+D:\STM32 Workspace\Embeded System 2\Lab2\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F4 -DSTM32 -DDEBUG -I"D:/STM32 Workspace/Embeded System 2/Lab2/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab2.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nano.specs -u _scanf_float -u _printf_float -T"D:\STM32 Workspace\Embeded System 2\Lab2\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Lab2.elf" @"objects.list"  
+'Finished building target: Lab2.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Lab2.elf" "Lab2.bin"
+arm-none-eabi-size "Lab2.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19612	    168	   1072	  20852	   5174	Lab2.elf
+arm-none-eabi-objdump -S "Lab2.elf" > "Lab2.lst"
+' '
+
+01:49:23 Build Finished (took 15s.485ms)
+

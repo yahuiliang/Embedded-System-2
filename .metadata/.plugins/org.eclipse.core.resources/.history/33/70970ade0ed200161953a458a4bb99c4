@@ -1,0 +1,62 @@
+/*
+ * keypad_api.c
+ *
+ *  Created on: Jan 3, 2017
+ *      Author: Yahui Liang
+ */
+
+#include <inttypes.h>
+#include "keypad_api.h"
+#include "reg_struct.h"
+
+static volatile GPIOx* gpioc = (GPIOx*) GPIOC_BASE;
+
+int main() {
+	key_init();
+	int key = key_getkey_noblock();
+	return 0;
+}
+
+void key_init() {
+	/* enable the clock */
+	volatile uint32_t* ahb1enr = (uint32_t*) RCC_AHB1ENR;
+	*ahb1enr |= 1 << 2;
+	/* sets mode for pins */
+	gpioc -> MODER &= ~0b1111111111111111;
+	gpioc -> MODER |= 0b0101010101010101;
+	/* pull up rows */
+	(gpioc -> PUPDR) &= ~0b11111111; // clear cols to be 0.
+	(gpioc -> PUPDR) |= 0b1111 << 4; // set rows to be 1.
+}
+
+int key_getkey_noblock() {
+	int four_set_bits = 0b1111;
+	int clear_bit = 1;
+	int col;
+	int row;
+	int pressed = 0;
+	for (col = 1; col <= 4 && pressed == 0; col++) {
+		int col_logic = four_set_bits & ~(clear_bit << (col - 1));
+		gpioc -> BSRR |= 0b1111 << 16; // clear previous odr logic.
+		gpioc -> BSRR |= col_logic; // set new logic.
+		for (row = 1; row <= 4 && pressed == 0; row++) {
+			int row_logic = (gpioc -> IDR >> 4) & ~0xFFF0;
+			if (row_logic == (four_set_bits & ~(clear_bit << (row - 1)))) {
+				pressed = 1;
+			}
+		}
+	}
+	int key = 0;
+	if (pressed == 1) {
+		key = col * row;
+	}
+	return key;
+}
+
+void key_getkey() {
+
+}
+
+void key_getchar() {
+
+}

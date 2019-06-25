@@ -1,0 +1,47 @@
+/*
+ * keypad_api.c
+ *
+ *  Created on: Dec 23, 2016
+ *      Author: Yahui Liang
+ */
+
+#include <inttypes.h>
+#include "keypad_api.h"
+#include "reg_structs.h"
+
+static volatile GPIOx* gpioc = (GPIOx*) 0x40020800;
+
+int main() {
+	return 0;
+}
+
+void key_init() {
+	enable_PC0_to_PC7();
+	pull_up_rows();
+}
+
+int key_getkey_noblock() {
+
+}
+
+int key_getkey() {
+
+}
+
+int key_getchar() {
+
+}
+
+static void enable_PC0_to_PC7() {
+	volatile uint32_t* ahb1enr = (uint32_t*) RCC_AHB1ENR;
+	*ahb1enr |= 0b11111111;
+}
+
+static void pull_up_rows() {
+	gpioc -> PUPDR |= 0b01010101 << (Px4 * 2);
+}
+
+static void reset_cols() {
+	gpioc -> ODR &= 0;
+}
+

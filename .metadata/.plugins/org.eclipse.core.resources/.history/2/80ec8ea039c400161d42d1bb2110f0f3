@@ -1,0 +1,115 @@
+#include "lcd_api.h"
+#include "delay_api.h";
+#include <inttypes.h>;
+
+void init_GPIOx_clock(char);
+void init_PB0_to_PB2_mode();
+void init_PC7_to_PC11_mode();
+
+void lcd_init() {
+	init_GPIOB();
+	init_GPIOC();
+}
+
+void lcd_clear() {
+
+}
+
+void lcd_home() {
+
+}
+
+void lcd_set_position() {
+
+}
+
+void lcd_print_string() {
+
+}
+
+void lcd_print_num() {
+
+}
+
+void init_GPIOB() {
+	init_GPIOx_clock('B');
+	init_PB0_to_PB2_mode();
+}
+
+void init_GPIOC() {
+	init_GPIOx_clock('C');
+	init_PC7_to_PC11_mode();
+}
+
+void init_GPIOx_clock(char port) {
+	/* enable the clock */
+	volatile uint32_t* rcc_ahb1enr;
+	rcc_ahb1enr = (uint32_t*) RCC_AHB1ENR;
+	if (port == 'B') {
+		*rcc_ahb1enr |= GPIOBEN;
+	} else if (port == 'C') {
+		*rcc_ahb1enr |= GPIOCEN;
+	}
+}
+
+void init_PB0_to_PB2_mode() {
+	volatile uint32_t* gpiob_base;
+	gpiob_base = (uint32_t*) GPIOB_BASE;
+	for (int bit = 0; bit < 3; bit++) {
+		gpiob_base[MODER] &= ~(0b11 << (bit * 2)); // make sure all bits are set to zero.
+		gpiob_base[MODER] |= OUTPUT << (bit * 2); // set mode from PB0 to PB2 to output mode.
+	}
+}
+
+void init_PC7_to_PC11_mode() {
+	volatile uint32_t* gpioc_base;
+	gpioc_base = (uint32_t*) GPIOC_BASE;
+	for (int bit = 8; bit < 12; bit++) {
+		gpioc_base[MODER] &= ~(0b11 << (bit * 2)); // make sure all bits are set to zero.
+		gpioc_base[MODER] |= OUTPUT << (bit * 2); // set mode from PC7 to PC11 to output mode.
+	}
+}
+
+void lcd_set_up() {
+	volatile uint32_t* gpiob_base;
+	gpiob_base = (uint32_t*) GPIOB_BASE;
+
+	delay_ms(100); // delay more than 40ms.
+
+}
+
+void lcd_cmd(uint8_t cmd) {
+	volatile uint32_t* gpiob_base;
+	gpiob_base = (uint32_t*) GPIOB_BASE;
+	uint32_t rw_rs_clr = RS_CLR | RW_CLR;
+	/* make sure RS and RW are cleared to be 0 */
+	gpiob_base[BSRR] |= rw_rs_clr;
+	lcd_exec();
+}
+
+void lcd_exec(uint8_t cmd) {
+	volatile uint32_t* gpioc_base;
+	gpioc_base = (uint32_t*) GPIOC_BASE;
+	lcd_set_upper_nibble(cmd);
+	lcd_set_lower_nibble(cmd);
+}
+
+void lcd_set_upper_nibble(uint8_t cmd) {
+	volatile uint32_t* gpioc_base;
+	gpioc_base = (uint32_t*) GPIOC_BASE;
+	uint16_t upper_half_cmd = (cmd & ~0xF) >> 4;
+	gpioc_base[ODR] |= upper_half_cmd << 8;
+}
+
+void lcd_set_lower_nibble(uint8_t cmd) {
+	volatile uint32_t* gpioc_base;
+	gpioc_base = (uint32_t*) GPIOC_BASE;
+	uint16_t lower_half_cmd = cmd & ~(0xF << 4);
+	gpioc_base[ODR] |= lower_half_cmd << 8;
+}
+
+void lcd_latch() {
+	volatile uint32_t* gpiob_base;
+	gpiob_base = (uint32_t*) GPIOB_BASE;
+	gpiob_base[ODR] |= E_SET;
+}

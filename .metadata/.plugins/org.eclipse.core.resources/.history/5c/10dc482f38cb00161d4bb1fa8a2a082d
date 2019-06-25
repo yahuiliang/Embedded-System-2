@@ -1,0 +1,24 @@
+/*
+ * reg_structs.h
+ *
+ *  Created on: Dec 25, 2016
+ *      Author: Yahui Liang
+ */
+
+#include <inttypes.h>
+
+#ifndef REG_STRUCTS_H_
+#define REG_STRUCTS_H_
+
+typedef struct {
+	uint32_t MODER;
+	uint32_t OTYPER;
+	uint32_t OSPEEDR;
+	uint32_t PUPDR;
+	uint32_t IDR;
+	uint32_t ODR;
+	uint32_t BSRR;
+} GPIOx;
+#define SET 1
+
+#endif /* REG_STRUCTS_H_ */

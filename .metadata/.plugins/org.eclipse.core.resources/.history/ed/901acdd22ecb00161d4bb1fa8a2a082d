@@ -1,0 +1,15 @@
+/*
+ * reg_structs.h
+ *
+ *  Created on: Dec 25, 2016
+ *      Author: Yahui Liang
+ */
+
+#ifndef REG_STRUCTS_H_
+#define REG_STRUCTS_H_
+
+typedef struct {
+	volatile uint32_t MODER;
+} GPIOx;
+
+#endif /* REG_STRUCTS_H_ */

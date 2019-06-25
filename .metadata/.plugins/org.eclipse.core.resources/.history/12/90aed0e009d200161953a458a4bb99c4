@@ -1,0 +1,44 @@
+/*
+ * keypad_api.c
+ *
+ *  Created on: Jan 3, 2017
+ *      Author: Yahui Liang
+ */
+
+#include <inttypes.h>
+#include "keypad_api.h"
+#include "reg_struct.h"
+
+static volatile GPIOx* gpioc = (GPIOx*) GPIOC_BASE;
+
+void key_init() {
+	/* enable the clock */
+	volatile uint32_t* ahb1enr = (uint32_t*) RCC_AHB1ENR;
+	*ahb1enr |= 1 << 2;
+	/* sets mode for pins */
+	gpioc -> MODER &= ~0b1111111111111111;
+	gpioc -> MODER |= 0b0101010101010101;
+	/* pull up rows */
+	gpioc -> PUPDR &= ~0b1111; // clear cols to be 0.
+	gpioc -> PUPDR |= 0b1111 << 4; // set rows to be 1.
+}
+
+void key_getkey_noblock() {
+	int four_set_bits = 0b1111;
+	int clear_bit = 1;
+	int col_logic = four_set_bits & ~clear_bit;
+	/* set col logic */
+	gpioc -> BSRR |= 0b1111 << 16; // clear previous odr logic.
+	gpioc -> BSRR |= col_logic; // set new logic.
+	if ((gpioc -> IDR & (0b1111 << 4)) == 0) {
+
+	}
+}
+
+void key_getkey() {
+
+}
+
+void key_getchar() {
+
+}

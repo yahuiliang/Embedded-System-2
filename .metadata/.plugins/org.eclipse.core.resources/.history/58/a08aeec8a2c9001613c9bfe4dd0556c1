@@ -1,0 +1,7 @@
+"src/delay_api.o"
+"src/lab3.o"
+"src/lcd_api.o"
+"src/syscalls.o"
+"src/uart_driver.o"
+"startup/startup_stm32.o"
+"startup/sysmem.o"

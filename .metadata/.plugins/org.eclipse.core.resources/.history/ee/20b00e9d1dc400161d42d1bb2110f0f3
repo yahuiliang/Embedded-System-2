@@ -1,0 +1,4 @@
+#define GPIOB_BASE (volatile uint32_t*) 0x40020400
+#define GPIOC_BASE (volatile uint32_t*) 0x40020800
+
+void lcd_init();
